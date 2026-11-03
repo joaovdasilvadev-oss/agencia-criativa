@@ -4,237 +4,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agência Criativa Web</title>
+    <title>Agência Criativa Web | Design que conecta</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header class="cabecalho">
-        <div class="container">
-            <a href="#home" class="logo">Criativa<span>.</span></a>
+        <a class="cabecalho__logo" href="#home" aria-label="Agência Criativa Web - início">
+            criativa<span>.</span>
+        </a>
 
-            <nav>
-                <ul class="menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navegacao" aria-label="Navegação principal">
+            <ul class="navegacao__lista">
+                <li class="navegacao__item"><a class="navegacao__link" href="#home">Home</a></li>
+                <li class="navegacao__item"><a class="navegacao__link" href="#sobre">Sobre nós</a></li>
+                <li class="navegacao__item"><a class="navegacao__link" href="#servicos">Serviços</a></li>
+                <li class="navegacao__item"><a class="navegacao__link" href="#depoimentos">Depoimentos</a></li>
+                <li class="navegacao__item">
+                    <a class="navegacao__link navegacao__link--contato" href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
 
-        <section id="home" class="home">
-            <div class="container home-conteudo">
-                <div class="home-texto">
-                    <p class="subtitulo">CRIATIVIDADE E INOVAÇÃO</p>
-                    <h1>Transformamos ideias em experiências <span>digitais.</span></h1>
-                    <p>
-                        Somos uma agência criativa especializada em design,
-                        tecnologia e soluções digitais que conectam marcas e pessoas.
-                    </p>
-                    <a href="#servicos" class="botao">Conheça nossos serviços</a>
-                </div>
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home__conteudo">
+                <p class="etiqueta">IDEIAS QUE VIRAM EXPERIÊNCIAS</p>
 
-                <div class="home-imagem">
-                    <img
-                        src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=80"
-                        srcset="
-                        https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600&q=80 600w,
-                        https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=80 1000w"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        alt="Mesa de trabalho de um estúdio criativo">
+                <h1 class="home__titulo">
+                    Design criativo.<br>
+                    <span>Resultados reais.</span>
+                </h1>
+
+                <p class="home__descricao">
+                    Criamos marcas e experiências digitais que aproximam pessoas e transformam negócios.
+                </p>
+
+                <a class="botao" href="#servicos">
+                    Conheça nossos serviços <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+            <div class="home__visual" aria-label="Composição abstrata de formas coloridas" role="img">
+                <div class="home__forma home__forma--grande"></div>
+                <div class="home__forma home__forma--pequena"></div>
+
+                <div class="home__cartao">
+                    <span class="home__cartao-etiqueta">ESTÚDIO CRIATIVO</span>
+                    <strong class="home__cartao-titulo">Ideias<br>em movimento.</strong>
+
+                    <div class="home__linhas">
+                        <i></i><i></i><i></i>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="sobre secao">
-            <div class="container sobre-conteudo">
+        <!-- SOBRE -->
+        <section class="sobre secao" id="sobre">
+            <div class="sobre__titulo">
+                <p class="etiqueta">QUEM SOMOS</p>
+                <h2 class="secao__titulo">
+                    Somos parceiros<br>da sua <span>próxima ideia.</span>
+                </h2>
+            </div>
+
+            <div class="sobre__texto">
+                <p>
+                    A Agência Criativa Web é um estúdio fictício apaixonado por criatividade,
+                    estratégia e tecnologia. Ajudamos marcas a encontrarem sua voz e construírem
+                    uma presença digital memorável.
+                </p>
+
+                <p>
+                    Unimos pensamento estratégico e design cuidadoso para criar soluções
+                    simples, relevantes e feitas para pessoas.
+                </p>
+
+                <a class="link-seta" href="#contato">
+                    Vamos conversar <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section class="servicos secao" id="servicos">
+            <div class="servicos__topo">
                 <div>
-                    <p class="subtitulo">QUEM SOMOS</p>
-                    <h2>Uma agência movida pela <span>criatividade.</span></h2>
+                    <p class="etiqueta">O QUE FAZEMOS</p>
+                    <h2 class="secao__titulo">
+                        Ideias transformadas<br>em <span>soluções.</span>
+                    </h2>
                 </div>
 
-                <div class="sobre-texto">
-                    <p>
-                        A Agência Criativa Web nasceu com o propósito de transformar
-                        ideias em projetos digitais únicos. Somos apaixonados por
-                        criatividade, inovação e tecnologia.
+                <p class="servicos__descricao">
+                    Do primeiro conceito à experiência final, criamos com propósito e atenção aos detalhes.
+                </p>
+            </div>
+
+            <div class="servicos__grid">
+
+                <article class="servico">
+                    <span class="servico__numero">01</span>
+                    <div class="servico__icone">✳</div>
+                    <h3 class="servico__titulo">Identidade visual</h3>
+                    <p class="servico__descricao">
+                        Marcas com personalidade, consistência e uma história para contar.
                     </p>
-                    <p>
-                        Trabalhamos em parceria com nossos clientes para desenvolver
-                        soluções que valorizam suas marcas e geram experiências
-                        memoráveis.
+                    <a class="servico__link" href="#contato" aria-label="Consultar sobre identidade visual">↗</a>
+                </article>
+
+                <article class="servico servico--destaque">
+                    <span class="servico__numero">02</span>
+                    <div class="servico__icone">⌘</div>
+                    <h3 class="servico__titulo">Web design</h3>
+                    <p class="servico__descricao">
+                        Sites modernos, intuitivos e responsivos para todos os dispositivos.
                     </p>
-                </div>
+                    <a class="servico__link" href="#contato" aria-label="Consultar sobre web design">↗</a>
+                </article>
+
+                <article class="servico">
+                    <span class="servico__numero">03</span>
+                    <div class="servico__icone">◎</div>
+                    <h3 class="servico__titulo">Social media</h3>
+                    <p class="servico__descricao">
+                        Conteúdo visual que conecta sua marca às pessoas certas.
+                    </p>
+                    <a class="servico__link" href="#contato" aria-label="Consultar sobre social media">↗</a>
+                </article>
+
+                <article class="servico">
+                    <span class="servico__numero">04</span>
+                    <div class="servico__icone">↗</div>
+                    <h3 class="servico__titulo">Estratégia digital</h3>
+                    <p class="servico__descricao">
+                        Planejamento criativo para crescer com clareza e propósito.
+                    </p>
+                    <a class="servico__link" href="#contato" aria-label="Consultar sobre estratégia digital">↗</a>
+                </article>
+
             </div>
         </section>
 
-        <section id="servicos" class="servicos secao">
-            <div class="container">
-                <div class="secao-titulo">
-                    <p class="subtitulo">O QUE FAZEMOS</p>
-                    <h2>Nossos <span>serviços</span></h2>
-                    <p>Conheça algumas das soluções que oferecemos.</p>
-                </div>
+        <!-- DEPOIMENTOS -->
+        <section class="depoimentos secao" id="depoimentos">
 
-                <div class="servicos-grid">
-
-                    <article class="servico-card">
-                        <div class="servico-icone">✦</div>
-                        <h3>Web Design</h3>
-                        <p>
-                            Criamos sites modernos, responsivos e intuitivos
-                            que proporcionam experiências incríveis.
-                        </p>
-                    </article>
-
-                    <article class="servico-card">
-                        <div class="servico-icone">◈</div>
-                        <h3>Identidade Visual</h3>
-                        <p>
-                            Desenvolvemos identidades visuais únicas para
-                            destacar sua marca no mercado.
-                        </p>
-                    </article>
-
-                    <article class="servico-card">
-                        <div class="servico-icone">◎</div>
-                        <h3>Marketing Digital</h3>
-                        <p>
-                            Criamos estratégias digitais para aumentar
-                            sua presença e alcançar novos clientes.
-                        </p>
-                    </article>
-
-                    <article class="servico-card">
-                        <div class="servico-icone">↗</div>
-                        <h3>Desenvolvimento</h3>
-                        <p>
-                            Construímos soluções web eficientes utilizando
-                            tecnologias modernas.
-                        </p>
-                    </article>
-
-                </div>
+            <div class="depoimentos__introducao">
+                <p class="etiqueta">QUEM CONFIA</p>
+                <h2 class="secao__titulo">
+                    Parcerias que<br><span>inspiram.</span>
+                </h2>
+                <p class="depoimentos__descricao">
+                    Relacionamentos construídos com colaboração, cuidado e boas ideias.
+                </p>
             </div>
-        </section>
 
-        <section id="depoimentos" class="depoimentos secao">
-            <div class="container">
-                <div class="secao-titulo">
-                    <p class="subtitulo">DEPOIMENTOS</p>
-                    <h2>O que nossos clientes <span>dizem</span></h2>
-                </div>
+            <article class="depoimento">
+                <div class="depoimento__aspas" aria-hidden="true">“</div>
 
-                <div class="depoimentos-grid">
+                <blockquote class="depoimento__texto">
+                    “A equipe entendeu nossa essência desde o primeiro encontro.
+                    O resultado ficou muito além do que imaginávamos!”
+                </blockquote>
 
-                    <article class="depoimento-card">
-                        <div class="estrelas">★★★★★</div>
-                        <blockquote>
-                            "A equipe foi extremamente profissional e criativa.
-                            Nosso site ficou incrível e superou nossas expectativas!"
-                        </blockquote>
-                        <div class="cliente">
-                            <div class="avatar">MC</div>
-                            <div>
-                                <h3>Mariana Costa</h3>
-                                <p>Empreendedora</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="depoimento-card">
-                        <div class="estrelas">★★★★★</div>
-                        <blockquote>
-                            "Excelente experiência! Conseguiram transformar
-                            nossa ideia em uma identidade visual marcante."
-                        </blockquote>
-                        <div class="cliente">
-                            <div class="avatar">RF</div>
-                            <div>
-                                <h3>Rafael Ferreira</h3>
-                                <p>Empresário</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="depoimento-card">
-                        <div class="estrelas">★★★★★</div>
-                        <blockquote>
-                            "Atendimento excelente, criatividade e muita
-                            dedicação em cada etapa do projeto."
-                        </blockquote>
-                        <div class="cliente">
-                            <div class="avatar">AS</div>
-                            <div>
-                                <h3>Ana Souza</h3>
-                                <p>Designer</p>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="contato" class="contato secao">
-            <div class="container contato-conteudo">
-
-                <div class="contato-info">
-                    <p class="subtitulo">ENTRE EM CONTATO</p>
-                    <h2>Vamos criar algo <span>incrível?</span></h2>
-                    <p>
-                        Tem um projeto em mente? Entre em contato conosco
-                        e vamos transformar sua ideia em realidade.
-                    </p>
-
-                    <div class="informacoes">
-                        <p><strong>E-mail:</strong> contato@agenciacriativa.com</p>
-                        <p><strong>Telefone:</strong> (11) 99999-9999</p>
-                        <p><strong>Endereço:</strong> São Paulo - SP</p>
+                <div class="depoimento__cliente">
+                    <div class="depoimento__avatar">MC</div>
+                    <div class="depoimento__identificacao">
+                        <strong class="depoimento__nome">Mariana Costa</strong>
+                        <span class="depoimento__cargo">Fundadora, Casa Aurora</span>
                     </div>
                 </div>
 
-                <form id="form-contato" class="formulario">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                <div class="depoimento__estrelas" aria-label="5 de 5 estrelas">★★★★★</div>
+            </article>
 
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            <article class="depoimento depoimento--secundario">
+                <div class="depoimento__aspas" aria-hidden="true">“</div>
 
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" rows="5"
-                        placeholder="Digite sua mensagem..." required></textarea>
+                <blockquote class="depoimento__texto">
+                    “Nosso novo site ficou lindo, rápido e fácil de usar.
+                    Uma parceria que recomendamos de olhos fechados.”
+                </blockquote>
 
-                    <button type="submit" class="botao">Enviar mensagem</button>
+                <div class="depoimento__cliente">
+                    <div class="depoimento__avatar depoimento__avatar--lilas">RF</div>
+                    <div class="depoimento__identificacao">
+                        <strong class="depoimento__nome">Rafael Ferreira</strong>
+                        <span class="depoimento__cargo">Diretor, Nexo Studio</span>
+                    </div>
+                </div>
 
-                    <p id="aviso" aria-live="polite"></p>
-                </form>
+                <div class="depoimento__estrelas" aria-label="5 de 5 estrelas">★★★★★</div>
+            </article>
 
+        </section>
+
+        <!-- CONTATO -->
+        <section class="contato secao" id="contato">
+
+            <div class="contato__informacoes">
+                <p class="etiqueta">FALE COM A GENTE</p>
+
+                <h2 class="secao__titulo">
+                    Vamos criar algo<br><span>incrível?</span>
+                </h2>
+
+                <p class="contato__descricao">
+                    Tem um projeto em mente? Conte um pouco sobre ele.
+                    Adoraríamos ouvir sua ideia.
+                </p>
+
+                <div class="contato__dados">
+                    <a href="mailto:oi@agenciacriativaweb.com">oi@agenciacriativaweb.com</a>
+                    <a href="tel:+5511999999999">(11) 99999-9999</a>
+                    <span>São Paulo — SP</span>
+                </div>
             </div>
+
+            <form class="formulario" id="form-contato">
+
+                <label class="formulario__label" for="nome">Seu nome</label>
+                <input class="formulario__campo" id="nome" name="nome" type="text"
+                    placeholder="Como podemos te chamar?" required>
+
+                <label class="formulario__label" for="email">Seu e-mail</label>
+                <input class="formulario__campo" id="email" name="email" type="email"
+                    placeholder="voce@email.com" required>
+
+                <label class="formulario__label" for="mensagem">Sua mensagem</label>
+                <textarea class="formulario__campo formulario__campo--textarea"
+                    id="mensagem" name="mensagem" rows="4"
+                    placeholder="Conte sobre sua ideia..." required></textarea>
+
+                <button class="botao botao--formulario" type="submit">
+                    Enviar mensagem <span aria-hidden="true">↗</span>
+                </button>
+
+                <p class="formulario__aviso" id="aviso-form" aria-live="polite">
+                    Formulário demonstrativo — não envia dados para um servidor.
+                </p>
+
+            </form>
         </section>
 
     </main>
 
+    <!-- RODAPÉ -->
     <footer class="rodape">
-        <div class="container">
-            <a href="#home" class="logo">Criativa<span>.</span></a>
-            <p>© 2026 Agência Criativa Web. Todos os direitos reservados.</p>
-        </div>
+        <a class="rodape__logo" href="#home">criativa<span>.</span></a>
+        <p class="rodape__texto">Design com propósito. Feito com criatividade.</p>
+        <span class="rodape__copyright">© 2026 Agência Criativa Web — Projeto fictício.</span>
     </footer>
 
     <script>
-        const formulario = document.getElementById("form-contato");
-        const aviso = document.getElementById("aviso");
-
-        formulario.addEventListener("submit", function(evento) {
+        document.getElementById("form-contato").addEventListener("submit", function (evento) {
             evento.preventDefault();
-            aviso.textContent = "Mensagem demonstrativa enviada com sucesso!";
-            formulario.reset();
+
+            document.getElementById("aviso-form").textContent =
+                "Mensagem demonstrativa validada! Este formulário não possui envio real.";
         });
     </script>
 
