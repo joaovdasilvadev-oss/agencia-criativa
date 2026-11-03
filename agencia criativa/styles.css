@@ -1,0 +1,451 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fc;
+    color: #22223b;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.secao {
+    padding: 6rem 0;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h1 span,
+h2 span {
+    color: #7158e2;
+}
+
+.subtitulo {
+    color: #7158e2;
+    font-weight: bold;
+    letter-spacing: 0.15rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #7158e2;
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #5740c4;
+    transform: translateY(-3px);
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5rem;
+    gap: 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #22223b;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #7158e2;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu a {
+    color: #22223b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #7158e2;
+}
+
+/* HOME */
+
+.home {
+    background: linear-gradient(135deg, #f8f9fc, #eeebff);
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.home-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.home-texto h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.home-texto > p:not(.subtitulo) {
+    color: #66677a;
+    margin-bottom: 2rem;
+    max-width: 35rem;
+}
+
+.home-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    box-shadow: 0 1rem 3rem rgba(75, 55, 150, 0.15);
+}
+
+/* SOBRE NÓS */
+
+.sobre {
+    background-color: white;
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+.sobre-texto p {
+    color: #66677a;
+    margin-bottom: 1rem;
+}
+
+/* SERVIÇOS */
+
+.servicos {
+    background-color: #f0effb;
+}
+
+.secao-titulo {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.secao-titulo > p:last-child {
+    color: #66677a;
+    margin-top: 1rem;
+}
+
+/* CSS GRID */
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.servico-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: 0.3s;
+    border: 1px solid #e8e6f5;
+}
+
+.servico-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(75, 55, 150, 0.1);
+}
+
+.servico-icone {
+    font-size: 2.5rem;
+    color: #7158e2;
+    margin-bottom: 1.5rem;
+}
+
+.servico-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.servico-card p {
+    color: #66677a;
+    font-size: 0.95rem;
+}
+
+/* DEPOIMENTOS */
+
+.depoimentos {
+    background-color: white;
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.depoimento-card {
+    padding: 2rem;
+    background-color: #f8f9fc;
+    border-radius: 1rem;
+    border: 1px solid #e8e6f5;
+}
+
+.estrelas {
+    color: #f5a623;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.depoimento-card blockquote {
+    color: #66677a;
+    margin-bottom: 2rem;
+}
+
+.cliente {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #7158e2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.cliente h3 {
+    font-size: 1rem;
+}
+
+.cliente p {
+    color: #77788a;
+    font-size: 0.85rem;
+}
+
+/* CONTATO */
+
+.contato {
+    background: linear-gradient(135deg, #22223b, #39305f);
+    color: white;
+}
+
+.contato-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+}
+
+.contato-info h2 {
+    margin-bottom: 1.5rem;
+}
+
+.contato-info > p:not(.subtitulo) {
+    color: #d0cfe0;
+    margin-bottom: 2rem;
+}
+
+.informacoes p {
+    margin-bottom: 0.8rem;
+    color: #e4e2f0;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #77718f;
+    border-radius: 0.5rem;
+    background-color: #302b4d;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #b7b2cc;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: 2px solid #a394ff;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario .botao {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
+
+#aviso {
+    color: #c8f169;
+    font-size: 0.9rem;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    background-color: #171729;
+    color: white;
+    padding: 2rem 0;
+}
+
+.rodape .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rodape p {
+    color: #b7b7c9;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE - TABLETS */
+
+@media (max-width: 900px) {
+    .home-conteudo {
+        gap: 2rem;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contato-conteudo {
+        gap: 2.5rem;
+    }
+}
+
+/* RESPONSIVIDADE - CELULARES */
+
+@media (max-width: 600px) {
+    .secao {
+        padding: 4rem 0;
+    }
+
+    .cabecalho .container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem 1.2rem;
+    }
+
+    .menu a {
+        font-size: 0.85rem;
+    }
+
+    .home {
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    .home-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .home-imagem {
+        margin-top: 1rem;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
