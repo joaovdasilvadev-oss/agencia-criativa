@@ -1,0 +1,28 @@
+// Mixin para botões
+@mixin botao-padrao {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.95rem 1.35rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+// Mixin para espaçamentos de seção
+@mixin espacamento-secao {
+    padding-block: clamp(4rem, 9vw, 7.5rem);
+}
+
+// Mixin responsivo
+@mixin responsivo($largura) {
+    @media (max-width: $largura) {
+        @content;
+    }
+}
